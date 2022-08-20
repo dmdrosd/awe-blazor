@@ -1,6 +1,9 @@
 using Abp.Dependency;
 using Abp.Domain.Services;
 using Abp.Events.Bus;
+using Awe.Core.Widget.Contracts.Builder;
+using Awe.Core.Widget.Contracts.View.MainMenu;
+using Awe.Core.Widget.Contracts.View.MainMenu.MainMenuItem;
 
 namespace Awe.Core.Widget.Domain.Builders;
 

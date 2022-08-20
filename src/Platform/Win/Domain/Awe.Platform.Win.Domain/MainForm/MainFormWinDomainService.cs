@@ -1,5 +1,7 @@
 using Abp.Dependency;
-using TGrant.Awe.Core.Widget.Contracts.View;
+using Awe.Core.Widget.Contracts;
+using Awe.Core.Widget.Contracts.Domain;
+using Awe.Core.Widget.Contracts.View.MainForm;
 
 namespace Awe.Platform.Win.Domain.MainForm;
 

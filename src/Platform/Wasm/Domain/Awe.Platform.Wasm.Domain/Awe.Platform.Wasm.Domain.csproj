@@ -14,7 +14,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\..\Core\Action\Awe.Core.Action.Core\Awe.Core.Action.Core.csproj" />
-      <ProjectReference Include="..\..\..\..\Core\Widget\TGrant.Awe.Core.Widget.Contracts\Awe.Core.Widget.Contracts.csproj" />
+      <ProjectReference Include="..\..\..\..\Core\Widget\Awe.Core.Widget.Contracts\Awe.Core.Widget.Contracts.csproj" />
       <ProjectReference Include="..\..\..\..\Core\Widget\Awe.Core.Widget.Domain\Awe.Core.Widget.Domain.csproj" />
       <ProjectReference Include="..\..\View\Awe.Platform.Wasm.View\Awe.Platform.Wasm.View.csproj" />
     </ItemGroup>

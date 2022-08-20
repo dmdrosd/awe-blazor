@@ -1,6 +1,6 @@
 using Abp.Modules;
 
-namespace TGrant.Awe.Starter;
+namespace Awe.Desktop.Starter;
 
 [DependsOn(typeof(WidgetApplicationModule))]
 [DependsOn(typeof(ActionModule))]

@@ -1,3 +1,4 @@
+using Awe.Core.Widget.Contracts.View.MainMenu.MainMenuItem;
 using DevExpress.XtraBars;
 
 namespace Awe.Platform.Win.View.MainFormView.MainMenu;

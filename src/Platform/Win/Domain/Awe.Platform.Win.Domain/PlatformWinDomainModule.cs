@@ -3,6 +3,8 @@ using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Awe.Core.Action.Core;
 using Awe.Core.Widget.Contracts;
+using Awe.Core.Widget.Contracts.Builder;
+using Awe.Core.Widget.Contracts.Domain;
 using Awe.Core.Widget.Domain;
 using Awe.Core.Widget.Domain.Builders;
 

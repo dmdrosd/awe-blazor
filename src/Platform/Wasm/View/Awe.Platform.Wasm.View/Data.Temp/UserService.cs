@@ -1,7 +1,6 @@
 ﻿using _Blazor.Starter.Data.App.User.Dto;
-using TGrant.Awe.Core.Widget.Contracts.Masa.Data.App.User.Dto;
 
-namespace TGrant.Awe.Custom.Platform.Wasm.View.Data.Temp;
+namespace Awe.Platform.Wasm.View.Data.Temp;
 
 public class UserService
 {

@@ -9,6 +9,8 @@ using Awe.Custom.Platform.Wasm.View;
 using Awe.Platform.Wasm.Domain.App;
 using Awe.Platform.Wasm.Domain.MainForm;
 using Awe.Platform.Wasm.Domain.Page;
+using Awe.Core.Widget.Contracts.Builder;
+using Awe.Core.Widget.Contracts.Domain;
 
 namespace Awe.Platform.Wasm.Domain;
 

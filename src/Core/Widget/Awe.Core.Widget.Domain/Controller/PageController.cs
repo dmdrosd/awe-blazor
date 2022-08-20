@@ -1,5 +1,5 @@
 using Abp.Domain.Services;
-using TGrant.Awe.Core.Widget.Contracts.Controller;
+using Awe.Core.Widget.Contracts.Controller;
 
 namespace Awe.Core.Widget.Domain.Controller;
 

@@ -1,12 +1,10 @@
 using Abp.Modules;
 using Awe.Core.Action.Application;
 using Awe.Core.Widget.Application;
-using Awe.Custom.Platform.Wasm.Domain;
 using Awe.Custom.Platform.Wasm.View;
 using Awe.Platform.Wasm.Domain;
 
 namespace _Blazor.Starter;
-
 
 [DependsOn(typeof(WidgetApplicationModule))]
 [DependsOn(typeof(ActionModule))]

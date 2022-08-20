@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Abp.Dependency;
-using DevExpress.XtraBars;
+using Awe.Core.Widget.Contracts.View.MainMenu;
+using Awe.Core.Widget.Contracts.View.MainMenu.MainMenuItem;
 using DevExpress.XtraBars.Ribbon;
-using TGrant.Awe.Core.Widget.Contracts.View.MainMenu;
 
 namespace Awe.Platform.Win.View.MainFormView.MainMenu;
 

@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using Abp.Dependency;
+using Awe.Core.Widget.Contracts.View.MainForm;
 using Castle.MicroKernel.Registration;
 using DevExpress.XtraBars.Ribbon;
 

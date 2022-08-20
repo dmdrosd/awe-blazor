@@ -1,5 +1,6 @@
 using Abp.Dependency;
 using Abp.Domain.Services;
+using Awe.Core.Widget.Contracts.Domain;
 
 namespace Awe.Platform.Win.Domain.App;
 
