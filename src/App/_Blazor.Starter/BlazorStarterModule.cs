@@ -1,8 +1,9 @@
 using Abp.Modules;
-using TGrant.Awe.Core.Action.Application;
-using TGrant.Awe.Core.Widget.Application;
-using TGrant.Awe.Custom.Platform.Wasm.Domain;
-using TGrant.Awe.Custom.Platform.Wasm.View;
+using Awe.Core.Action.Application;
+using Awe.Core.Widget.Application;
+using Awe.Custom.Platform.Wasm.Domain;
+using Awe.Custom.Platform.Wasm.View;
+using Awe.Platform.Wasm.Domain;
 
 namespace _Blazor.Starter;
 

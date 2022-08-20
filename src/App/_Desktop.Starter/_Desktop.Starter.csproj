@@ -15,9 +15,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Core\Action\TGrant.Awe.Core.Action.Application\TGrant.Awe.Core.Action.Application.csproj" />
-      <ProjectReference Include="..\..\Core\Widget\TGrant.Awe.Core.Widget.Application\TGrant.Awe.Core.Widget.Application.csproj" />
-      <ProjectReference Include="..\..\Custom\_Platform\Win\Domain\TGrant.Awe.Custom.Platform.Win.Domain\TGrant.Awe.Custom.Platform.Win.Domain.csproj" />
+      <ProjectReference Include="..\..\Core\Action\Awe.Core.Action.Application\Awe.Core.Action.Application.csproj" />
+      <ProjectReference Include="..\..\Core\Widget\TGrant.Awe.Core.Widget.Application\Awe.Core.Widget.Application.csproj" />
+      <ProjectReference Include="..\..\Platform\Win\Domain\Awe.Platform.Win.Domain\Awe.Platform.Win.Domain.csproj" />
+      <ProjectReference Include="..\..\Platform\Win\View\Awe.Platform.Win.View\Awe.Platform.Win.View.csproj" />
     </ItemGroup>
 
     <ItemGroup>

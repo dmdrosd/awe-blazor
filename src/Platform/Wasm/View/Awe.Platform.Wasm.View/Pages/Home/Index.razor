@@ -1,0 +1,18 @@
+﻿@page "/"
+
+@using _Blazor.Starter.Data.Base
+
+@inherits LayoutComponentBase
+
+@inject NavigationManager Nav
+@inject IConfigDomainService GlobalConfig
+
+@code {
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if(firstRender)
+        {
+            Nav.NavigateTo(GlobalConfig.DefaultRoute,true);    
+        }
+    }
+}

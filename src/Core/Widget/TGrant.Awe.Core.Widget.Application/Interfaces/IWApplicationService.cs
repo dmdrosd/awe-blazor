@@ -1,4 +1,4 @@
-namespace TGrant.Awe.Core.Widget.Application.Interfaces;
+namespace Awe.Core.Widget.Application.Interfaces;
 
 public interface IWApplicationService
 {

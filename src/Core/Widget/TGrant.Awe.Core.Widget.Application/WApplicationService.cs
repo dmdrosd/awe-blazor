@@ -1,9 +1,9 @@
 using Abp.Application.Services;
 using Abp.Dependency;
-using TGrant.Awe.Core.Widget.Application.Interfaces;
+using Awe.Core.Widget.Application.Interfaces;
 using TGrant.Awe.Core.Widget.Contracts.Domain;
 
-namespace TGrant.Awe.Core.Widget.Application;
+namespace Awe.Core.Widget.Application;
 
 public class WApplicationService : ApplicationService, IWApplicationService, ISingletonDependency
 {

@@ -1,7 +1,7 @@
 ﻿using Abp.Modules;
-using TGrant.Awe.Core.Action.Contracts;
+using Awe.Core.Action.Contracts;
 
-namespace TGrant.Awe.Core.Widget.Contracts;
+namespace Awe.Core.Widget.Contracts;
 
 [DependsOn(typeof(ActionContractsModule))]
 public class WidgetContractsModule : AbpModule

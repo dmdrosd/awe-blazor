@@ -1,9 +1,9 @@
 ﻿using Abp.Modules;
 using Abp.Reflection.Extensions;
-using TGrant.Awe.Core.Widget.Application.Interfaces;
-using TGrant.Awe.Core.Widget.Contracts;
+using Awe.Core.Widget.Application.Interfaces;
+using Awe.Core.Widget.Contracts;
 
-namespace TGrant.Awe.Core.Widget.Application;
+namespace Awe.Core.Widget.Application;
 
 [DependsOn(typeof(WidgetContractsModule))]
 public class WidgetApplicationModule : AbpModule

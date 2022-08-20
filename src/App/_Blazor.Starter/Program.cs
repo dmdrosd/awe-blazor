@@ -1,13 +1,10 @@
 using _Blazor.Starter;
 using _Blazor.Starter.WebAssembly;
 using Abp;
-using Abp.Castle.Logging.Log4Net;
-using Castle.Facilities.Logging;
+using Awe.Platform.Wasm.Domain;
+using Awe.Platform.Wasm.View;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using TGrant.Awe.Custom.Platform.Wasm.Domain;
-using TGrant.Awe.Custom.Platform.Wasm.View;
-using TGrant.Awe.Custom.Platform.Wasm.View.MainForm;
 
 using (var bootstrapper = AbpBootstrapper.Create<BlazorStarterModule>())
 {

@@ -1,7 +1,7 @@
 using Abp;
 using Abp.Castle.Logging.Log4Net;
 using Castle.Facilities.Logging;
-using TGrant.Awe.Core.Widget.Application.Interfaces;
+using Awe.Core.Widget.Application.Interfaces;
 using TGrant.Awe.Starter;
 
 using (var bootstrapper = AbpBootstrapper.Create<DesktopStarterModule>())

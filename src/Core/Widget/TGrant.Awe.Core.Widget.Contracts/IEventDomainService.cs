@@ -1,4 +1,4 @@
-using TGrant.Awe.Core.Action.Contracts;
+using Awe.Core.Action.Contracts;
 
 namespace TGrant.Awe.Core.Widget.Contracts;
 
