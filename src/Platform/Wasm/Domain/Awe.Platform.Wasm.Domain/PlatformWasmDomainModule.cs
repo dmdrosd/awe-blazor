@@ -1,4 +1,5 @@
-﻿using Abp.Dependency;
+﻿using _Blazor.Starter.Global.Nav.Model;
+using Abp.Dependency;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Awe.Core.Action.Core;
@@ -8,7 +9,10 @@ using Awe.Core.Widget.Domain.Builders;
 using Awe.Custom.Platform.Wasm.View;
 using Awe.Platform.Wasm.Domain.App;
 using Awe.Platform.Wasm.Domain.MainForm;
+using Awe.Platform.Wasm.Domain.Navigation;
 using Awe.Platform.Wasm.Domain.Page;
+using System.Net.Http.Json;
+using System.Reflection;
 
 namespace Awe.Platform.Wasm.Domain;
 

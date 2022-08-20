@@ -1,4 +1,4 @@
-﻿namespace Awe.Platform.Wasm.View.MainForm;
+﻿namespace Awe.Platform.Wasm.View.Shared.MainForm;
 
 public partial class MainLayout
 {

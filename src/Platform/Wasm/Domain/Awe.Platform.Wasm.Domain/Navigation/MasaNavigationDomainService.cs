@@ -1,10 +1,11 @@
 ﻿using _Blazor.Starter.Global.Nav.Model;
+using Abp;
 using Abp.Domain.Services;
 using Microsoft.AspNetCore.Components;
 
 namespace Awe.Platform.Wasm.Domain.Navigation
 {
-    public class MasaNavigationDomainService : DomainService, INavigationDomainService
+    public class MasaNavigationDomainService : DomainService, INavigationDomainService, IShouldInitialize
     {
         private readonly NavigationManager _navigationManager;
         private readonly IConfigDomainService _globalConfig;
@@ -14,6 +15,11 @@ namespace Awe.Platform.Wasm.Domain.Navigation
             _navigationManager = navigationManager;
             _globalConfig = globalConfig;
             Initialization();
+        }
+
+        public void Initialize()
+        {
+            throw new NotImplementedException();
         }
 
         public List<NavModel> Navs { get; } = new();
