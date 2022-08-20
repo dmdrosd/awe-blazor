@@ -1,0 +1,84 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Abp" Version="7.3.0" />
+    <PackageReference Include="Abp.Castle.Log4Net" Version="7.3.0" />
+    <PackageReference Include="Masa.Blazor" Version="0.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.8" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Action\Awe.Core.Action.Application\Awe.Core.Action.Application.csproj" />
+    <ProjectReference Include="..\..\Core\Widget\TGrant.Awe.Core.Widget.Application\Awe.Core.Widget.Application.csproj" />
+    <ProjectReference Include="..\..\Platform\Wasm\Domain\Awe.Platform.Wasm.Domain\Awe.Platform.Wasm.Domain.csproj" />
+    <ProjectReference Include="..\..\Platform\Wasm\View\Awe.Platform.Wasm.View\Awe.Platform.Wasm.View.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\App\Todo\Todo.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\Todo\TodoDetail.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\Todo\TodoNav.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\ECommerce\Order\Address.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\ECommerce\Order\Cart.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\ECommerce\Order\Order.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\ECommerce\Order\Payment.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\ECommerce\Shop\Details.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\ECommerce\Shop\Shop.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\Invoice\Add.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\Invoice\Components\AddPayment.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\Invoice\Components\InvoiceList.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\Invoice\Components\SendInvoice.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\Invoice\Edit.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\Invoice\List.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\Invoice\Preview.razor" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\apps-eCommerce\1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\apps-eCommerce\2.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\apps-eCommerce\3.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\apps-eCommerce\5.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\apps-eCommerce\6.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\apps-eCommerce\7.png" />
+    <_ContentIncludedByDefault Remove="Pages\App\User\Add.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\User\Edit.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\User\List.razor" />
+    <_ContentIncludedByDefault Remove="Pages\App\User\View.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Authentication\Components\ForgotPassword.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Authentication\Components\Login.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Authentication\Components\Register.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Authentication\Components\ResetPassword.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Authentication\ForgotPassword-v1.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Authentication\ForgotPassword-v2.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Authentication\Login-v1.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Authentication\Login-v2.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Authentication\Register-v1.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Authentication\Register-v2.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Authentication\ResetPassword-v1.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Authentication\ResetPassword-v2.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Dashboard\Analytics.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Home\Index.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Others\AccountSettings\AccountSettings.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Others\Error.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Others\NotAuthorized.razor" />
+    <_ContentIncludedByDefault Remove="Pages\Others\NotFound.razor" />
+    <_ContentIncludedByDefault Remove="Shared\Breadcrumb.razor" />
+    <_ContentIncludedByDefault Remove="Shared\EmptyLayout.razor" />
+    <_ContentIncludedByDefault Remove="Shared\Favorite.razor" />
+    <_ContentIncludedByDefault Remove="Shared\Language.razor" />
+    <_ContentIncludedByDefault Remove="Shared\Login.razor" />
+    <_ContentIncludedByDefault Remove="Shared\MainLayout.razor" />
+    <_ContentIncludedByDefault Remove="Shared\Navigation.razor" />
+    <_ContentIncludedByDefault Remove="Shared\PageTabs.razor" />
+    <_ContentIncludedByDefault Remove="Shared\Search.razor" />
+    <_ContentIncludedByDefault Remove="Shared\Settings.razor" />
+    <_ContentIncludedByDefault Remove="wwwroot\sample-data\weather.json" />
+  </ItemGroup>
+
+
+</Project>
