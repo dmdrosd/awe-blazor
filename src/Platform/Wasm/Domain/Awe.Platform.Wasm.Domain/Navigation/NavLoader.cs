@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using _Blazor.Starter.Global.Nav.Model;
+﻿using _Blazor.Starter.Global.Nav.Model;
 
 namespace Awe.Platform.Wasm.Domain.Navigation
 {

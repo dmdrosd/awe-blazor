@@ -1,7 +1,7 @@
-using Microsoft.AspNetCore.Components.Authorization;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Components.Authorization;
 
-namespace _Blazor.Starter.WebAssembly
+namespace Awe.Platform.Wasm.Domain.App
 {
     public class TestAuthStateProvider : AuthenticationStateProvider
     {
