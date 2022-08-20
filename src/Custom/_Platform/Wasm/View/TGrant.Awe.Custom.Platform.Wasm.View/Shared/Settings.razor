@@ -1,0 +1,37 @@
+﻿@using BlazorComponent
+@using Abp.Extensions
+@inject IConfigDomainService GlobalConfig
+
+<MNavigationDrawer Value=Show ValueChanged=ShowChanged Fixed Right Temporary Width="300">
+    <PrependContent>
+        <MContainer>
+            <MToolbar Flat Height="80">
+                <h5>
+                    Settings
+                </h5>
+            </MToolbar>
+        </MContainer>
+    </PrependContent>
+    <ChildContent>
+        <MContainer>
+            <h6>Mode</h6>
+            <MButtonGroup Mandatory Value=GlobalConfig.PageMode.ToString() ValueChanged="PageModeChanged" class="mt-1">
+                <MButton Value="PageModes.Breadcrumb.ToString()" Text Width="135">@PageModes.Breadcrumb</MButton>
+                <MButton Value="PageModes.PageTab.ToString()" Text Width="135">@PageModes.PageTab</MButton>
+            </MButtonGroup>
+        </MContainer>
+    </ChildContent>
+</MNavigationDrawer>
+
+@code {
+    [Parameter]
+    public bool Show { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> ShowChanged { get; set; }
+
+    void PageModeChanged(StringNumber value)
+    {
+        GlobalConfig.SetPageMode(value);
+    }
+}

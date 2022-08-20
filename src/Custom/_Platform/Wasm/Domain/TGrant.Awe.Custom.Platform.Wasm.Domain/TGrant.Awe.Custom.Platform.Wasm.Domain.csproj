@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Abp" Version="7.3.0" />
+      <PackageReference Include="BlazorComponent" Version="0.5.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.8" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\..\..\Core\Action\TGrant.Awe.Core.Action.Core\TGrant.Awe.Core.Action.Core.csproj" />
+      <ProjectReference Include="..\..\..\..\..\Core\Widget\TGrant.Awe.Core.Widget.Domain\TGrant.Awe.Core.Widget.Domain.csproj" />
+      <ProjectReference Include="..\..\View\TGrant.Awe.Custom.Platform.Wasm.View\TGrant.Awe.Custom.Platform.Wasm.View.csproj" />
+    </ItemGroup>
+
+</Project>
