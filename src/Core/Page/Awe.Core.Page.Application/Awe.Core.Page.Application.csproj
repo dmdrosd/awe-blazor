@@ -11,7 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Widget\TGrant.Awe.Core.Widget.Contracts\Awe.Core.Widget.Contracts.csproj" />
+      <ProjectReference Include="..\..\Widget\Awe.Core.Widget.Contracts\Awe.Core.Widget.Contracts.csproj" />
     </ItemGroup>
 
 </Project>

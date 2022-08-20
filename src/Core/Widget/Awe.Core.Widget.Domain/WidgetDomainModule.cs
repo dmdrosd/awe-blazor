@@ -1,8 +1,6 @@
 ﻿using Abp.Modules;
 using Abp.Reflection.Extensions;
 
-using Awe.Core.Widget.Contracts;
-
 namespace Awe.Core.Widget.Domain;
 
 [DependsOn(typeof(WidgetContractsModule))]

@@ -1,4 +1,4 @@
-﻿namespace TGrant.Awe.Custom.Platform.Wasm.View.Data.Temp;
+﻿namespace Awe.Platform.Wasm.View.Data.Temp;
 
 public static class AnalyticsService
 {

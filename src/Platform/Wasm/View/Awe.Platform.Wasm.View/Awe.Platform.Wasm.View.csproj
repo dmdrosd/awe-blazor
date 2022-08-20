@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
@@ -59,7 +59,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\..\Core\Widget\TGrant.Awe.Core.Widget.Contracts\Awe.Core.Widget.Contracts.csproj" />
+      <ProjectReference Include="..\..\..\..\Core\Widget\Awe.Core.Widget.Contracts\Awe.Core.Widget.Contracts.csproj" />
     </ItemGroup>
 
 </Project>
