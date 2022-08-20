@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>TGrant.Awe.Starter</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Abp" Version="7.3.0" />
+      <PackageReference Include="Abp.Castle.Log4Net" Version="7.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Core\Action\TGrant.Awe.Core.Action.Application\TGrant.Awe.Core.Action.Application.csproj" />
+      <ProjectReference Include="..\..\Core\Widget\TGrant.Awe.Core.Widget.Application\TGrant.Awe.Core.Widget.Application.csproj" />
+      <ProjectReference Include="..\..\Custom\_Platform\Win\Domain\TGrant.Awe.Custom.Platform.Win.Domain\TGrant.Awe.Custom.Platform.Win.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="log4net.config">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <SupportedPlatform Include="browser" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Abp" Version="7.3.0" />
+        <PackageReference Include="DevExpress.Blazor" Version="21.2.3" />
+        <PackageReference Include="Masa.Blazor" Version="0.5.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\..\..\Core\Widget\TGrant.Awe.Core.Widget.Contracts\TGrant.Awe.Core.Widget.Contracts.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\Counter.razor" />
+      <_ContentIncludedByDefault Remove="Pages\FetchData.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Index.razor" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Pages\App\User\Add.razor" />
+      <AdditionalFiles Include="Pages\App\User\Edit.razor" />
+      <AdditionalFiles Include="Pages\App\User\List.razor" />
+      <AdditionalFiles Include="Pages\App\User\View.razor" />
+      <AdditionalFiles Include="Pages\Authentication\Components\ForgotPassword.razor" />
+      <AdditionalFiles Include="Pages\Authentication\Components\Login.razor" />
+      <AdditionalFiles Include="Pages\Authentication\Components\Register.razor" />
+      <AdditionalFiles Include="Pages\Authentication\Components\ResetPassword.razor" />
+      <AdditionalFiles Include="Pages\Authentication\ForgotPassword-v1.razor" />
+      <AdditionalFiles Include="Pages\Authentication\ForgotPassword-v2.razor" />
+      <AdditionalFiles Include="Pages\Authentication\Login-v1.razor" />
+      <AdditionalFiles Include="Pages\Authentication\Login-v2.razor" />
+      <AdditionalFiles Include="Pages\Authentication\Register-v1.razor" />
+      <AdditionalFiles Include="Pages\Authentication\Register-v2.razor" />
+      <AdditionalFiles Include="Pages\Authentication\ResetPassword-v1.razor" />
+      <AdditionalFiles Include="Pages\Authentication\ResetPassword-v2.razor" />
+      <AdditionalFiles Include="Pages\Dashboard\Analytics.razor" />
+      <AdditionalFiles Include="Pages\Home\Index.razor" />
+      <AdditionalFiles Include="Pages\Others\AccountSettings\AccountSettings.razor" />
+      <AdditionalFiles Include="Pages\Others\Error.razor" />
+      <AdditionalFiles Include="Pages\Others\NotAuthorized.razor" />
+      <AdditionalFiles Include="Pages\Others\NotFound.razor" />
+      <AdditionalFiles Include="Shared\Breadcrumb.razor" />
+      <AdditionalFiles Include="Shared\EmptyLayout.razor" />
+      <AdditionalFiles Include="Shared\Favorite.razor" />
+      <AdditionalFiles Include="Shared\Language.razor" />
+      <AdditionalFiles Include="Shared\Login.razor" />
+      <AdditionalFiles Include="Shared\Navigation.razor" />
+      <AdditionalFiles Include="Shared\PageTabs.razor" />
+      <AdditionalFiles Include="Shared\Search.razor" />
+      <AdditionalFiles Include="Shared\Settings.razor" />
+    </ItemGroup>
+
+</Project>
