@@ -2,6 +2,9 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Awe.Core.Widget.Contracts;
+using Awe.Core.Widget.Contracts.View.MainForm;
+using Awe.Core.Widget.Contracts.View.MainMenu.MainMenuItem;
+using Awe.Core.Widget.Contracts.View.Page;
 using Awe.Platform.Win.View.MainFormView;
 using Awe.Platform.Win.View.MainFormView.MainMenu;
 using Awe.Platform.Win.View.Page;

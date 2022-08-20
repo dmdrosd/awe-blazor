@@ -1,4 +1,6 @@
-﻿namespace Awe.Platform.Wasm.View.Pages.Dashboard
+﻿using Awe.Platform.Wasm.View.Data.Temp;
+
+namespace Awe.Platform.Wasm.View.Pages.Dashboard
 {
     public partial class Analytics : ProComponentBase
     {

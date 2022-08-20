@@ -1,4 +1,5 @@
 using System.Windows.Forms;
+using Awe.Core.Widget.Contracts.View.Page;
 
 namespace Awe.Platform.Win.View.Page;
 

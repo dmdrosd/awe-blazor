@@ -3,8 +3,10 @@ using _Blazor.Starter.Global.Nav.Model;
 using Abp.Dependency;
 using Abp.Domain.Services;
 using Abp.Extensions;
+using Awe.Core.Widget.Contracts.Domain;
+using Awe.Core.Widget.Contracts.View.Page;
 
-namespace Awe.Custom.Platform.Wasm.Domain.Config
+namespace Awe.Platform.Wasm.Domain.Config
 {
     public class MasaConfigDomainService : DomainService, IConfigDomainService, ISingletonDependency
     {

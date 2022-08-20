@@ -1,5 +1,6 @@
 ﻿using _Blazor.Starter.Global.Nav.Model;
 using Abp.Extensions;
+using Awe.Platform.Wasm.View.Data.Temp;
 
 namespace Awe.Platform.Wasm.View.Shared
 {

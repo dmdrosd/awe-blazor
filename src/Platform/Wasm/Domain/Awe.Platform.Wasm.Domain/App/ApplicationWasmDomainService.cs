@@ -1,14 +1,14 @@
 using _Blazor.Starter.Global.Nav.Model;
 using Abp.Dependency;
 using Abp.Domain.Services;
-using Awe.Custom.Platform.Wasm.Domain.Config;
 using Awe.Platform.Wasm.Domain.Navigation;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System.Net.Http.Json;
-using System.Reflection;
+using Awe.Core.Widget.Contracts.Domain;
+using Awe.Platform.Wasm.Domain.Config;
 
 namespace Awe.Platform.Wasm.Domain.App;
 

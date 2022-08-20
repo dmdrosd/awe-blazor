@@ -1,7 +1,6 @@
 using Abp.Application.Services;
-using TGrant.Awe.Core.Widget.Contracts.Controller;
-using TGrant.Awe.Core.Widget.Contracts.View;
-using TGrant.Awe.Core.Widget.Contracts.View.Page;
+using Awe.Core.Widget.Contracts.Controller;
+using Awe.Core.Widget.Contracts.View.Page;
 
 namespace Awe.Core.Page.Application;
 

@@ -2,6 +2,8 @@ using Abp.Domain.Services;
 using Awe.Contracts.Settings.Enums.Menu;
 using Awe.Contracts.Settings.Menu;
 using Awe.Contracts.Settings.ViewerBuild;
+using Awe.Core.Widget.Contracts;
+using Awe.Core.Widget.Contracts.Builder;
 
 namespace Awe.Platform.Win.Domain.MainForm;
 

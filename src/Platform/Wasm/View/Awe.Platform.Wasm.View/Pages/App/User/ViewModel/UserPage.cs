@@ -1,6 +1,6 @@
-﻿using TGrant.Awe.Core.Widget.Contracts.Masa.Data.App.User.Dto;
+﻿using _Blazor.Starter.Data.App.User.Dto;
 
-namespace _Blazor.Starter.Pages.App.User;
+namespace Awe.Platform.Wasm.View.Pages.App.User.ViewModel;
 
 public class UserPage
 {

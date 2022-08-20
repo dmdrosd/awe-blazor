@@ -1,6 +1,7 @@
 ﻿using _Blazor.Starter.Global.Nav.Model;
 using Abp;
 using Abp.Domain.Services;
+using Awe.Core.Widget.Contracts.Domain;
 using Microsoft.AspNetCore.Components;
 
 namespace Awe.Platform.Wasm.Domain.Navigation
