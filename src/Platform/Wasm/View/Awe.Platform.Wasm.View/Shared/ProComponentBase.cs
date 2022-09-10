@@ -20,4 +20,3 @@ public abstract class ProComponentBase : ComponentBase, IDisposable
     {
     }
 }
-
