@@ -1,14 +1,21 @@
 using _Blazor.Starter;
-using Abp;
 using Awe.Core.Widget.Application.Interfaces;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
-using var bootstrapper = AbpBootstrapper.Create<BlazorStarterModule>();
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
-//bootstrapper.IocManager.IocContainer.AddFacility<LoggingFacility>(f =>
-//    f.UseAbpLog4Net().WithConfig("log4net.config"));
+var application = await builder.AddApplicationAsync<BlazorStarterModule>(options =>
+{
+    options.UseAutofac();
+});
 
-bootstrapper.Initialize();
+var host = builder.Build();
 
-bootstrapper.IocManager
-    .Resolve<IWApplicationService>()
+await application.InitializeApplicationAsync(host.Services);
+
+builder.Services.AddSingleton(builder);
+builder.Services.AddSingleton(host);
+
+await builder.Services
+    .GetRequiredService<IWApplicationService>()
     .StartAsync(args);

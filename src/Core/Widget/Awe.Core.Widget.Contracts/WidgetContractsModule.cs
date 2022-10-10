@@ -1,5 +1,5 @@
-﻿using Abp.Modules;
-using Awe.Core.Action.Contracts;
+﻿using Awe.Core.Action.Contracts;
+using Volo.Abp.Modularity;
 
 namespace Awe.Core.Widget.Contracts;
 

@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Abp.Dependency;
 using Awe.Core.Widget.Contracts.View.MainMenu;
 using Awe.Core.Widget.Contracts.View.MainMenu.MainMenuItem;
 using DevExpress.XtraBars.Ribbon;
+using Volo.Abp.DependencyInjection;
 
 namespace Awe.Platform.Win.View.MainFormView.MainMenu;
 

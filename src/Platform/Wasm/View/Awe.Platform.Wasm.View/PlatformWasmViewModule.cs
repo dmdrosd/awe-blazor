@@ -1,13 +1,9 @@
-﻿using Abp.Modules;
-using Abp.Reflection.Extensions;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Volo.Abp.Modularity;
 
-namespace Awe.Custom.Platform.Wasm.View;
+namespace Awe.Platform.Wasm.View;
 
 [DependsOn(typeof(WidgetContractsModule))]
 public class PlatformWasmViewModule : AbpModule
 {
-    public override void Initialize()
-    {
-        IocManager.RegisterAssemblyByConvention(GetType().GetAssembly());
-    }
 }

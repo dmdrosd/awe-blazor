@@ -1,4 +1,4 @@
-using Abp.Modules;
+using Volo.Abp.Modularity;
 
 namespace Awe.Desktop.Starter;
 

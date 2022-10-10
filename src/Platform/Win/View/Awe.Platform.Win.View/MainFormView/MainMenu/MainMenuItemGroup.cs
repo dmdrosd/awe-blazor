@@ -3,10 +3,11 @@ using System.Linq;
 using Awe.Core.Widget.Contracts.View.MainMenu.MainMenuItem;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
+using Volo.Abp.DependencyInjection;
 
 namespace Awe.Platform.Win.View.MainFormView.MainMenu;
 
-public class MainMenuItemGroup : IMainMenuItemGroupView
+public class MainMenuItemGroup : IMainMenuItemGroupView, ITransientDependency
 {
     private readonly RibbonPageGroup _barSubItem;
 

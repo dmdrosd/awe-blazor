@@ -1,13 +1,8 @@
-﻿using Abp.Modules;
-using Abp.Reflection.Extensions;
+﻿using Volo.Abp.Modularity;
 
 namespace Awe.Core.Page.Application;
 
 [DependsOn(typeof(WidgetContractsModule))]
 public class PageModule : AbpModule
 {
-    public override void Initialize()
-    {
-        IocManager.RegisterAssemblyByConvention(GetType().GetAssembly());
-    }
 }

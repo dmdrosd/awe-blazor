@@ -1,4 +1,4 @@
-using Abp.Domain.Services;
+using Volo.Abp.Domain.Services;
 
 namespace Awe.Core.Widget.Contracts.Controller;
 

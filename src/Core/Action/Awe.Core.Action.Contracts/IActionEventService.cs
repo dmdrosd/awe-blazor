@@ -1,8 +1,8 @@
-using Abp.Events.Bus.Handlers;
+using Volo.Abp.EventBus;
 
 namespace Awe.Core.Action.Contracts;
 
-public interface IActionEventService<in T> : IAsyncEventHandler<T>
+public interface IActionEventService<in T> : ILocalEventHandler<T>
     where T : WidgetEventData
 {
 }

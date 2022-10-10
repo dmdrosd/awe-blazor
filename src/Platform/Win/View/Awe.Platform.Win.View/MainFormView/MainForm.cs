@@ -1,15 +1,23 @@
 ﻿using System.Windows.Forms;
-using Abp.Dependency;
 using Awe.Core.Widget.Contracts.View.MainForm;
-using Castle.MicroKernel.Registration;
-using DevExpress.XtraBars.Ribbon;
+using Volo.Abp.DependencyInjection;
+using RibbonControl = DevExpress.XtraBars.Ribbon.RibbonControl;
 
 namespace Awe.Platform.Win.View.MainFormView
 {
-    public partial class MainForm : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm, IMainFormView, ISingletonDependency
+    public partial class MainForm : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm, 
+        IMainFormView, 
+        ISingletonDependency
     {
         public MainForm()
         {
+            InitializeComponent();
+
+            WindowPropsInit();
+        }
+        public MainForm(RibbonControl ribbonControl)
+        {
+            ribbonControl1 = ribbonControl;
             InitializeComponent();
 
             WindowPropsInit();
@@ -27,10 +35,6 @@ namespace Awe.Platform.Win.View.MainFormView
             {
                 return;
             }
-
-            IocManager.Instance.IocContainer.Register(
-                Component.For<RibbonControl>().Instance(ribbonControl1)
-            );
 
             WindowState = FormWindowState.Maximized;
             KeyPreview = true;

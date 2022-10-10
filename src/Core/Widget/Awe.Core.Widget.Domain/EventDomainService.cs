@@ -1,22 +1,21 @@
-﻿using Abp.Domain.Services;
-using Abp.Events.Bus;
+﻿using Volo.Abp.Domain.Services;
+using Volo.Abp.EventBus.Local;
 
 namespace Awe.Core.Widget.Domain;
 
 public class EventDomainService : DomainService, IEventDomainService
 {
-    private readonly EventBus _eventBus;
+    private readonly ILocalEventBus _eventBus;
 
     public EventDomainService()
     {
-        _eventBus = EventBus.Default;
+        _eventBus = NullLocalEventBus.Instance;
     }
 
     public void TriggerEvent<T>(T eventData)
         where T: WidgetEventData
     {
-        _eventBus.Trigger(eventData);
-
-        EventBus.Default.Trigger(new WidgetEventData());
+        _eventBus.PublishAsync(eventData);
+        _eventBus.PublishAsync(new WidgetEventData());
     }
 }

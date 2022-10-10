@@ -1,6 +1,6 @@
-using Abp.Dependency;
 using Awe.Core.Widget.Contracts.View.MainMenu.MainMenuItem;
 using DevExpress.XtraBars;
+using Volo.Abp.DependencyInjection;
 
 namespace Awe.Platform.Win.View.MainFormView.MainMenu;
 

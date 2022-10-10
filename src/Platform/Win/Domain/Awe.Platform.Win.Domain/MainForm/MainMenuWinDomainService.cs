@@ -1,13 +1,14 @@
-using Abp.Domain.Services;
 using Awe.Contracts.Settings.Enums.Menu;
 using Awe.Contracts.Settings.Menu;
 using Awe.Contracts.Settings.ViewerBuild;
 using Awe.Core.Widget.Contracts;
 using Awe.Core.Widget.Contracts.Builder;
+using Volo.Abp.DependencyInjection;
+using Volo.Abp.Domain.Services;
 
 namespace Awe.Platform.Win.Domain.MainForm;
 
-public class MainMenuWinDomainService : DomainService, IMainMenuDomainService
+public class MainMenuWinDomainService : DomainService, IMainMenuDomainService, ISingletonDependency
 {
     private readonly IMainMenuBuilder _mainMenuBuilder;
     

@@ -1,6 +1,4 @@
 using _Blazor.Starter.Global.Nav.Model;
-using Abp.Dependency;
-using Abp.Domain.Services;
 using Awe.Platform.Wasm.Domain.Navigation;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
@@ -9,11 +7,22 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Net.Http.Json;
 using Awe.Core.Widget.Contracts.Domain;
 using Awe.Platform.Wasm.Domain.Config;
+using Volo.Abp.DependencyInjection;
+using Volo.Abp.Domain.Services;
 
 namespace Awe.Platform.Wasm.Domain.App;
 
 public class ApplicationWasmDomainService : DomainService, IWApplicationDomainService, ISingletonDependency
 {
+    private readonly WebAssemblyHostBuilder _builder;
+    private readonly WebAssemblyHost host;
+
+    public ApplicationWasmDomainService(WebAssemblyHostBuilder builder, WebAssemblyHost host)
+    {
+        this._builder = builder;
+        this.host = host;
+    }
+
     public void Start(string[] args)
     {
         throw new NotImplementedException();
@@ -21,15 +30,14 @@ public class ApplicationWasmDomainService : DomainService, IWApplicationDomainSe
 
     public async Task StartAsync(string[] args)
     {
-        var builder = WebAssemblyHostBuilder.CreateDefault(args);
+        //TODO move to module init
+        await ServicesInitialize(_builder);
 
-        await ServicesInitialize(builder);
-
-        builder.RootComponents.Add<View.App>("#app");
-        builder.RootComponents.Add<HeadOutlet>("head::after");
+        _builder.RootComponents.Add<View.App>("#app");
+        _builder.RootComponents.Add<HeadOutlet>("head::after");
 
         // Masa
-        await builder.Services
+        await _builder.Services
             .AddMasaBlazor(builder =>
             {
                 builder.UseTheme(option =>
@@ -38,16 +46,25 @@ public class ApplicationWasmDomainService : DomainService, IWApplicationDomainSe
                     option.Accent = "#4318FF";
                 });
             })
-            .AddI18nForWasmAsync(Path.Combine(builder.HostEnvironment.BaseAddress, "i18n"));
+            .AddI18nForWasmAsync(Path.Combine(_builder.HostEnvironment.BaseAddress, "i18n"));
 
         // Devexpress
-        builder.Services.AddDevExpressBlazor();
-        builder.Services.Configure<DevExpress.Blazor.Configuration.GlobalOptions>(options =>
+        _builder.Services.AddDevExpressBlazor();
+        _builder.Services.Configure<DevExpress.Blazor.Configuration.GlobalOptions>(options =>
         {
             options.BootstrapVersion = DevExpress.Blazor.BootstrapVersion.v5;
         });
 
-        await builder.Build().RunAsync();
+        //var application = await _builder.AddApplicationAsync<PlatformWasmDomainModule>(options =>
+        //{
+        //    options.UseAutofac();
+        //});
+
+        //var host = _builder.Build();
+
+        //await application.InitializeApplicationAsync(host.Services);
+
+        await host.RunAsync();
     }
 
     private static async Task ServicesInitialize(WebAssemblyHostBuilder builder)

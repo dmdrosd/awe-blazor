@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Abp" Version="7.3.0" />
     <PackageReference Include="DevExpress.Win.Design" Version="21.2.*-*" />
   </ItemGroup>
 

@@ -1,12 +1,13 @@
-﻿using Abp.Dependency;
-using Abp.Modules;
-using Abp.Reflection.Extensions;
+﻿using System.Windows.Controls.Ribbon;
 using Awe.Core.Action.Core;
 using Awe.Core.Widget.Contracts;
 using Awe.Core.Widget.Contracts.Builder;
 using Awe.Core.Widget.Contracts.Domain;
 using Awe.Core.Widget.Domain;
 using Awe.Core.Widget.Domain.Builders;
+using DevExpress.Utils;
+using Microsoft.Extensions.DependencyInjection;
+using Volo.Abp.Modularity;
 
 namespace Awe.Platform.Win.Domain;
 
@@ -16,20 +17,13 @@ namespace Awe.Platform.Win.Domain;
 [DependsOn(typeof(ActionDomainModule))]
 public class PlatformWinDomainModule : AbpModule
 {
-    public override void PreInitialize()
+    public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        base.PreInitialize();
+        base.ConfigureServices(context);
 
-        IocManager.Register<IWApplicationDomainService, ApplicationWinDomainService>();
-        
-        IocManager.Register<IWMainFormDomainService, MainFormWinDomainService>();
-        
-        IocManager.Register<IMainMenuDomainService, MainMenuWinDomainService>();
-        IocManager.Register<IMainMenuBuilder, MainMenuBuilder>(DependencyLifeStyle.Singleton);
-    }
-
-    public override void Initialize()
-    {
-        IocManager.RegisterAssemblyByConvention(GetType().GetAssembly());
+        context.Services.AddSingleton<IWApplicationDomainService, ApplicationWinDomainService>();
+        context.Services.AddSingleton<IWMainFormDomainService, MainFormWinDomainService>();
+        context.Services.AddSingleton<IMainMenuDomainService, MainMenuWinDomainService>();
+        context.Services.AddSingleton<IMainMenuBuilder, MainMenuBuilder>();
     }
 }

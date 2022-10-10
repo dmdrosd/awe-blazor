@@ -1,7 +1,7 @@
-using Abp.Application.Services;
-using Abp.Dependency;
 using Awe.Core.Widget.Application.Interfaces;
 using Awe.Core.Widget.Contracts.Domain;
+using Volo.Abp.Application.Services;
+using Volo.Abp.DependencyInjection;
 
 namespace Awe.Core.Widget.Application;
 

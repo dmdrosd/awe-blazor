@@ -1,36 +1,29 @@
-﻿using Abp.Dependency;
-using Abp.Modules;
-using Abp.Reflection.Extensions;
-using Awe.Core.Widget.Contracts;
+﻿using Awe.Core.Widget.Contracts;
 using Awe.Core.Widget.Contracts.View.MainForm;
 using Awe.Core.Widget.Contracts.View.MainMenu.MainMenuItem;
-using Awe.Core.Widget.Contracts.View.Page;
 using Awe.Platform.Win.View.MainFormView;
 using Awe.Platform.Win.View.MainFormView.MainMenu;
-using Awe.Platform.Win.View.Page;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
+using Microsoft.Extensions.DependencyInjection;
+using Volo.Abp.Modularity;
 
 namespace Awe.Platform.Win.View;
 
 [DependsOn(typeof(WidgetContractsModule))]
 public class PlatformWinViewModule : AbpModule
 {
-    public override void PreInitialize()
+    public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        base.PreInitialize();
+        base.ConfigureServices(context);
 
-        IocManager.Register<IMainFormView, MainForm>();
-        IocManager.Register<IPageView, PageView>();
+        context.Services.AddSingleton<RibbonControl>();
+        context.Services.AddSingleton<IMainFormView, MainForm>();
 
-        IocManager.Register<IMainMenuItemButtonView, MainMenuItemButton>(DependencyLifeStyle.Transient);
-        IocManager.Register<BarButtonItem>(DependencyLifeStyle.Transient);
-        IocManager.Register<IMainMenuItemGroupView, MainMenuItemGroup>(DependencyLifeStyle.Transient);
-        IocManager.Register<RibbonPageGroup>(DependencyLifeStyle.Transient);
-    }
+        context.Services.AddTransient<BarButtonItem>();
+        context.Services.AddTransient<RibbonPageGroup>();
 
-    public override void Initialize()
-    {
-        IocManager.RegisterAssemblyByConvention(GetType().GetAssembly());
+        context.Services.AddTransient<IMainMenuItemButtonView, MainMenuItemButton>();
+        context.Services.AddTransient<IMainMenuItemGroupView, MainMenuItemGroup>();
     }
 }

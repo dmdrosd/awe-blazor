@@ -1,23 +1,41 @@
-using Abp;
-using Abp.Castle.Logging.Log4Net;
-using Castle.Facilities.Logging;
 using Awe.Core.Widget.Application.Interfaces;
 using Awe.Desktop.Starter;
+using Microsoft.Extensions.DependencyInjection;
+using Serilog;
+using Serilog.Events;
+using Volo.Abp;
 
-using (var bootstrapper = AbpBootstrapper.Create<DesktopStarterModule>())
+Log.Logger = new LoggerConfiguration()
+#if DEBUG
+    .MinimumLevel.Debug()
+#else
+            .MinimumLevel.Information()
+#endif
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+    .Enrich.FromLogContext()
+    .WriteTo.Async(c => c.File("Logs/logs.txt"))
+    .CreateLogger();
+
+try
 {
-    var iocManager = bootstrapper.IocManager;
-    iocManager.IocContainer.AddFacility<LoggingFacility>(f =>
+    Log.Information("Starting Desktop host.");
+
+    var abpApplication = await AbpApplicationFactory.CreateAsync<DesktopStarterModule>(options =>
     {
-        f.UseAbpLog4Net().WithConfig("log4net.config");
+        options.UseAutofac();
+        options.Services.AddLogging(loggingBuilder => loggingBuilder.AddSerilog(dispose: true));
     });
 
-    bootstrapper.Initialize();
+    await abpApplication.InitializeAsync();
 
     Application.EnableVisualStyles();
     Application.SetCompatibleTextRenderingDefault(false);
 
-    iocManager
-        .Resolve<IWApplicationService>()
+    abpApplication.Services
+        .GetRequiredService<IWApplicationService>()?
         .Start(args);
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Host terminated unexpectedly!");
 }

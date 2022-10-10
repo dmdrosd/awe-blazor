@@ -1,7 +1,7 @@
-using Abp.Dependency;
 using Awe.Core.Widget.Contracts;
 using Awe.Core.Widget.Contracts.Domain;
 using Awe.Core.Widget.Contracts.View.MainForm;
+using Volo.Abp.DependencyInjection;
 
 namespace Awe.Platform.Win.Domain.MainForm;
 
