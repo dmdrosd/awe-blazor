@@ -27,7 +27,7 @@ namespace Awe.Platform.Wasm.Domain.Config
         }
 
         //TODO move to appconfig
-        public string DefaultRoute => "app/user/list";
+        public string DefaultRoute => "app/viewer/list";
 
         public string IsDarkCookieKey { get; set; } = "GlobalConfig_IsDark";
         public string PageModeKey { get; set; } = "GlobalConfig_PageMode";

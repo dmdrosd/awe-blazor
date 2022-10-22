@@ -16,7 +16,10 @@ else
 {
     <MCard>
         <MCardText Class="pa-6">
-            <DxGrid Data="@_forecasts" CssClass="mw-1100" RowDoubleClick="OnRowDoubleClick">
+            <DxGrid 
+                Data="@_forecasts" 
+                CssClass="mw-1100"
+                RowDoubleClick="OnRowDoubleClick">
                 <Columns>
                     <DxGridDataColumn Caption="Date" FieldName="Date" />
                     <DxGridDataColumn Caption="Summary" FieldName="Summary" />
