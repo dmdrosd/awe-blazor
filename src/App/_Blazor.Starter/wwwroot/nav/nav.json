@@ -35,6 +35,12 @@
         "Title": "Edit",
         "Icon": "mdi-circle",
         "Href": "app/user/edit"
+      },
+      {
+        "Id": 101,
+        "Title": "Viewers",
+        "Icon": "mdi-circle",
+        "Href": "app/viewer/list"
       }
     ]
   },

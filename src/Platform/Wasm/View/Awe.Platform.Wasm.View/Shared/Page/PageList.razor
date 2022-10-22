@@ -1,0 +1,33 @@
+@page "/app/viewer/list"
+
+@using Awe.Core.Widget.Contracts.Domain
+
+@inject NavigationManager Nav
+
+@inherits PageBase<IPageDomainService>
+
+<h3>PageList</h3>
+
+@if (_forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <MCard>
+        <MCardText Class="pa-6">
+            <DxGrid 
+                Data="@_forecasts" 
+                CssClass="mw-1100"
+                RowDoubleClick="OnRowDoubleClick">
+                <Columns>
+                    <DxGridDataColumn Caption="Date" FieldName="Date" />
+                    <DxGridDataColumn Caption="Summary" FieldName="Summary" />
+                    <DxGridDataColumn Caption="TemperatureC" FieldName="TemperatureC" />
+                </Columns>
+            </DxGrid>
+        </MCardText>
+    </MCard>
+
+    @Alert
+}

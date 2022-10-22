@@ -6,7 +6,7 @@ namespace Awe.Core.Page.Application;
 
 public class PageService : ApplicationService, IPageService
 {
-    private IPageView _pageView;
+    private readonly IPageView _pageView;
     private IPageController _pageController;
 
     public PageService(IPageView pageView, IPageController pageController)
